@@ -64,9 +64,17 @@ class Pelicula {
 
   getPosterImg() {
     if (posterPath == null) {
-      return '';
+      return 'https://image.tmdb.org/t/p/w500/pq0JSpwyT2URytdFG0euztQPAyR.jpg';
     } else {
       return 'https://image.tmdb.org/t/p/w500/$posterPath';
+    }
+  }
+
+  getBackgroundImg() {
+    if (posterPath == null) {
+      return 'https://image.tmdb.org/t/p/w500/pq0JSpwyT2URytdFG0euztQPAyR.jpg';
+    } else {
+      return 'https://image.tmdb.org/t/p/w500/$backdropPath';
     }
   }
 }

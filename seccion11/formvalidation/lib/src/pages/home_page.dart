@@ -46,10 +46,17 @@ class HomePage extends StatelessWidget {
   }
 
   Widget _crearItem(BuildContext context, ProductoModel producto) {
-    return ListTile(
-      title: Text('${producto.titulo} -  ${producto.valor}'),
-      subtitle: Text(producto.id),
-      onTap: () => Navigator.pushNamed(context, 'producto'),
+    return Dismissible(
+      key: UniqueKey(),
+      background: Container(
+        color: Colors.red,
+      ),
+      onDismissed: (direccion) {},
+      child: ListTile(
+        title: Text('${producto.titulo} -  ${producto.valor}'),
+        subtitle: Text(producto.id),
+        onTap: () => Navigator.pushNamed(context, 'producto'),
+      ),
     );
   }
 }

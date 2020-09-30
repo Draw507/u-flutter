@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:noticias/src/services/news_service.dart';
 import 'package:provider/provider.dart';
 
 class TabsPage extends StatelessWidget {

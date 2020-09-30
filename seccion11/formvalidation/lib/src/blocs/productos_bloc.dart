@@ -23,6 +23,7 @@ class ProductosBloc {
     _cargandoController.sink.add(true);
     final productos = await _productsProvider.crearProducto(producto);
     _cargandoController.sink.add(false);
+    //cargarProductos(); SOLUCION NO OPTIMA
   }
 
   Future<String> subirFoto(File foto) async {
@@ -37,12 +38,14 @@ class ProductosBloc {
     _cargandoController.sink.add(true);
     await _productsProvider.editarProductos(producto);
     _cargandoController.sink.add(false);
+    //cargarProductos(); SOLUCION NO OPTIMA
   }
 
   void borrarProducto(String id) async {
     //_cargandoController.sink.add(true);
     await _productsProvider.borrarProducto(id);
     //_cargandoController.sink.add(false);
+    //cargarProductos(); SOLUCION NO OPTIMA
   }
 
   dispose() {
